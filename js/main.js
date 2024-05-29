@@ -7,6 +7,7 @@ let txtNumber = document.getElementById("Number");
 let alertValidaciones = document.getElementById("alertValidaciones");
 let alertValidacionesTexto = document.getElementById("alertValidacionesTexto");
 
+let fecha = document.getElementById("fecha");
 let cuerpoTabla = tablaListaCompras.getElementsByTagName("tbody").item(0);
 let totalProductos = document.getElementById("totalProductos");
 
@@ -149,6 +150,9 @@ window.addEventListener("load", function (event) {
       cuerpoTabla.insertAdjacentHTML("beforeend", row);
     });
   }
+
+  let now = new Date();
+  fecha.innerText = now.getFullYear();
 
   contadorProductos.innerText = contador;
   productosTotal.innerText = totalEnProductos;
